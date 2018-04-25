@@ -1,0 +1,52 @@
+
+\begin{document}
+
+\pagestyle{FootNoRef}
+
+% \noindent\textcolor{JEBleuFonce}{\Huge\textbf{Trombinoscope des chargés}}
+% \begin{flushright}
+% \textbf{\LARGE\textcolor{JEBleuClair}{Mandat 2017 - 2018}}
+% \end{flushright}
+% \bigskip\bigskip\bigskip
+
+%Begin
+%ca
+\noindent\begin{minipage}[b][2.4cm][t]{6cm}
+      %\noindent\begin{tabular}{l}
+    	\textcolor{JEBleuClair}{\Large\textbf{Conseil d’administration}}
+      %\end{tabular}
+  \end{minipage}
+%\noindent\vspace{1cm}\\
+\csvreader[head to column names]{trombi/ca.csv}{}% use head of csv as column names
+  {\noindent\begin{minipage}[b][2.35cm][b]{6cm}
+    \noindent\begin{center}
+      \noindent\begin{tabular}{c}
+        \includegraphics[width=2.5cm,height=3cm,keepaspectratio]{\image.jpg}\\
+        \givenname\ \name \\%\textsc{\MakeLowercase{\name}} \\
+        \textcolor{JEGrisClair}{Promo \promo}\\
+        \textcolor{JEBleuFonce}{\poste} \vspace{3pt}
+      \end{tabular}
+    \end{center}
+  \end{minipage}
+}
+
+\clearpage
+%chargés
+\noindent\textcolor{JEBleuClair}{\Large\textbf{Chargés}}\\
+
+\csvreader[head to column names]{trombi/ca.csv}{}% use head of csv as column names
+  {\noindent\begin{minipage}[b][2.41cm][b]{6cm}
+    \noindent\begin{center}
+      \noindent\begin{tabular}{c}
+        \includegraphics[width=2.5cm,height=2.95cm,keepaspectratio]{\image.jpg}\\
+        \givenname\ \name \\%\textsc{\MakeLowercase{\name}} \\
+        \textcolor{JEGrisClair}{Promo \promo}\\
+        \textcolor{JEBleuFonce}{Pôle \poste} \vspace{3pt}
+      \end{tabular}
+    \end{center}
+  \end{minipage}
+}
+
+
+
+\end{document}
