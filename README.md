@@ -1,6 +1,8 @@
 # Jems-docs
 Template de docs types et de trombi réalisé en LaTeX pour Junior ESIEE
 
+Pour tester le rendu directement (sans téléchargement) : [voici le projet déployé sur Overleaf](https://www.overleaf.com/read/sznvmtrsrqww).
+
 # Installation
 Avec apt (Debian/Ubuntu) : ``sudo apt install make texlive-latex-base texlive-lualatex texlive-lang-french texlive-latex-extra``
 
