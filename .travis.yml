@@ -1,7 +1,7 @@
 sudo: required
 dist: trusty
 before_install:
-- sudo apt-get -qq update && sudo apt-get install -y texlive-latex-base texlive-lualatex texlive-lang-french texlive-latex-extra
+- sudo apt-get -qq update && sudo apt-get install -y texlive-latex-base texlive-luatex texlive-lang-french texlive-latex-extra
 script:
 - lualatex main.tex -interaction=nonstopmode -halt-on-error *.tex
 #idea from https://mirocupak.com/continuous-integration-for-latex/
