@@ -1,6 +1,6 @@
 # Jems-docs
 
-[![Build Status](https://travis-ci.org/Gui-U/jems-docs.svg?branch=master)](https://travis-ci.org/Gui-U/jems-docs)
+[![Build Status](https://travis-ci.org/JUNIOR-ESIEE/jems-docs.svg?branch=master)](https://travis-ci.org/JUNIOR-ESIEE/jems-docs)
 
 Template de docs types et de trombi réalisé en LaTeX pour Junior ESIEE
 
