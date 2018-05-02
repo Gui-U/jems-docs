@@ -1,0 +1,42 @@
+\begin{document}
+\pagestyle{FootNoParaph}
+
+\begin{flushright}
+\noindent\textcolor{JEGrisBleu}{\huge\textbf{Rapport technique}}
+\noindent\rule{\textwidth}{0.4pt}
+\smallskip
+
+\textbf{\LARGE\textcolor{JEBleuClair}{CC\tagEtudeNum}}
+\end{flushright}
+
+\bigskip
+
+\noindent\textcolor{JEBleuFonce}{\Huge\textbf{Étude sur les flocons de neige}}\\
+\bigskip\bigskip\bigskip\bigskip\bigskip\bigskip\bigskip
+
+\begin{center}
+\noindent\begin{tabular}{@{}rl@{}}
+\textbf{Client :} 	& \tagClientCompagny \\
+\textbf{Version :} 	& \tagDocVersion\\
+\textbf{Établi le :} 	& \tagDocDate\\
+\textbf{Auteurs :} 	& Chef de projet~:\\
+			& \hspace{15pt} \tagCommercialPrenom~\tagCommercialNom\\
+			& Réalisateurs~:\\
+			& \hspace{15pt} \begin{tabular}{@{}l}%
+    \csvreader[head to column names]{technical_report/real.csv}{}% use head of csv as column names
+    {\givenname~\name\\}% specify your coloumns here
+    \end{tabular}\\
+\end{tabular}
+\end{center}
+
+
+\vfill
+\noindent \mentionsLegales
+\clearpage%\newpage
+
+\tableofcontents
+
+\clearpage
+
+\input{technical_report/rt.content.tex}
+\end{document}
