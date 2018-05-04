@@ -1,4 +1,9 @@
+\documentclass{global/junior}
+
+\title{Jems}
+
 \begin{document}
+
 \pagestyle{FootNoParaph}
 
 \begin{flushright}
@@ -23,7 +28,7 @@
 			& \hspace{15pt} \tagCommercialPrenom~\tagCommercialNom\\
 			& Réalisateurs~:\\
 			& \hspace{15pt} \begin{tabular}{@{}l}%
-    \csvreader[head to column names]{technical_report/real.csv}{}% use head of csv as column names
+    \csvreader[head to column names]{technical_report/rt.real.\iddoc.csv}{}% use head of csv as column names
     {\givenname~\name\\}% specify your coloumns here
     \end{tabular}\\
 \end{tabular}
@@ -38,5 +43,5 @@
 
 \clearpage
 
-\input{technical_report/rt.content.tex}
+\input{technical_report/rt.content.\iddoc.tex}
 \end{document}
