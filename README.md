@@ -13,7 +13,8 @@ Pour **tester le rendu directement** (sans téléchargement) : [voici le projet 
 
 # Utilisation
 * Pour compiler :
-`make`
+`make DOC=` + *le dossier contenant le main à compiler*
+Par exemple : `make DOC=trombi` ou `make DOC=technical_report`.
 
 * Pour tout nettoyer et retrouver un dossier propre :
 `make clean`
