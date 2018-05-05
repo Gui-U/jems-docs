@@ -3,12 +3,12 @@
 IDDOC=default
 
 all:
-	echo "\\\newcommand{\iddoc}{$(IDDOC)}\n\input{./$(DOC)/vars.\iddoc.tex}" > select.tmp
-	lualatex --shell-escape $(DOC)/main.tex
-	echo "One more time to update references (fix bug Page1/??)"
-	lualatex --shell-escape $(DOC)/main.tex
-	echo "Cleaning..."
-	make clean_soft
+	- echo "\\\newcommand{\iddoc}{$(IDDOC)}\n\input{./$(DOC)/vars.\iddoc.tex}" > select.tmp
+	lualatex --shell-escape $(DOC)/main.tex -interaction=nonstopmode -halt-on-error *.tex
+	- echo "One more time to update references (fix bug Page1/??)"
+	lualatex --shell-escape $(DOC)/main.tex -interaction=nonstopmode -halt-on-error *.tex
+	- echo "Cleaning..."
+	- make clean_soft
 
 clean_soft:
 	- rm material/Logo_final-eps-converted-to.pdf
@@ -20,6 +20,6 @@ clean_soft:
 	- rm *.toc
 
 clean:
-	make clean_soft
+	- make clean_soft
 	- echo "removing PDF"
 	- rm $(DOC)/main.pdf

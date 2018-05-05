@@ -14,12 +14,12 @@ Pour **tester le rendu directement** (sans téléchargement) : [voici le projet 
 # Utilisation
 * Pour compiler :
 `make DOC=` + *le dossier contenant le main à compiler*
+
 Par exemple : `make DOC=trombi` ou `make DOC=technical_report`.
 
 * Pour tout nettoyer et retrouver un dossier propre :
 `make clean`
 
-* Pour changer de type de document, décommenter la ligne correspondante dans le fichier [`main.tex`](./blob/master/main.tex).
 # Dev
 Le présent [dépot Git](https://github.com/JUNIOR-ESIEE/jems-docs) suit une architecture [*git-flow*](https://danielkummer.github.io/git-flow-cheatsheet/#getting_started).
 
