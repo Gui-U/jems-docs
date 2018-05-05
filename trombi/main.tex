@@ -1,4 +1,6 @@
+\documentclass{global/junior}
 
+\title{Jems}
 \begin{document}
 
 \pagestyle{FootNoRef}
@@ -15,7 +17,7 @@
 %ca
 \textcolor{JEBleuClair}{\Large\textbf{Conseil d’administration}}
 \vspace{3mm}\\
-\csvreader[head to column names]{trombi/ca.csv}{}% use head of csv as column names
+\csvreader[head to column names]{trombi/ca.\iddoc.csv}{}% use head of csv as column names
  {\noindent\begin{minipage}[b][2.35cm][b]{0.3\textwidth}
     \noindent\begin{center}
       \noindent\begin{tabular}{c}
@@ -33,7 +35,7 @@
 %chargés
 \textcolor{JEBleuClair}{\Large\textbf{Chargés}}
 \vspace{2mm}\\
-\csvreader[head to column names]{trombi/ca.csv}{}% use head of csv as column names
+\csvreader[head to column names]{trombi/ca.\iddoc.csv}{}% use head of csv as column names
  {\noindent\begin{minipage}[b][2.35cm][b]{0.3\textwidth}
     \noindent\begin{center}
       \noindent\begin{tabular}{c}

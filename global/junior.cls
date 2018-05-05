@@ -1,17 +1,18 @@
-\ProvidesClass{junior}[2017/11/15 v1 Junior class]
+\ProvidesClass{global/junior}[2017/11/15 v1 Junior class]
 \LoadClass[11pt,a4paper]{article}
 \usepackage{fontspec}
 \usepackage[french]{babel}
 
 
-\defaultfontfeatures[SansSourcePro] %only with lualatex
+\defaultfontfeatures[SansSourcePro] %only with lualatex %in case of "error:  (type 2): cannot find file ''" : https://tex.stackexchange.com/questions/65038/luatex-cannot-find-existing-font
 {
+Path = material/,
 Extension = .ttf ,
-UprightFont = material/SourceSansPro-Regular,
-BoldFont = material/SourceSansPro-Bold,
-ItalicFont = material/SourceSansPro-Italic,
-BoldItalicFont = material/SourceSansPro-BoldItalic
-}
+UprightFont = SourceSansPro-Regular,
+BoldFont = SourceSansPro-Bold,
+ItalicFont = SourceSansPro-Italic,
+BoldItalicFont = SourceSansPro-BoldItalic
+}%path relative to the main.tex file.
 \setmainfont{SansSourcePro}%only with lualatex
 
 %\usepackage[utf8x]{inputenc}%if pdfLatex
@@ -25,7 +26,7 @@ BoldItalicFont = material/SourceSansPro-BoldItalic
 \usepackage{eurosym}
 \usepackage{svg}
 
-\input{bool.tex}
+\input{./global/vars.tex}%path relative to the main.tex file.
 
 \usepackage{xcolor}
 %Color liste

@@ -3,5 +3,5 @@ dist: trusty
 before_install:
 - sudo apt-get -qq update && sudo apt-get install -y texlive-latex-base texlive-luatex texlive-lang-french texlive-latex-extra texlive-fonts-recommended texlive-xetex
 script:
-- lualatex main.tex -interaction=nonstopmode -halt-on-error *.tex
+- make DOC=technical_report
 #idea from https://mirocupak.com/continuous-integration-for-latex/

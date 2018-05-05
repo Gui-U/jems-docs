@@ -1,20 +1,25 @@
 .DEFAULT_GOAL := all
 
+IDDOC=default
+
 all:
-	lualatex main.tex
-	echo "One more time to update references (fix bug Page1/??)"
-	lualatex main.tex
-	echo "Cleaning..."
-	make clean_soft
+	- echo "\\\newcommand{\iddoc}{$(IDDOC)}\n\input{./$(DOC)/vars.\iddoc.tex}" > select.tmp
+	lualatex --shell-escape $(DOC)/main.tex -interaction=nonstopmode -halt-on-error *.tex
+	- echo "One more time to update references (fix bug Page1/??)"
+	lualatex --shell-escape $(DOC)/main.tex -interaction=nonstopmode -halt-on-error *.tex
+	- echo "Cleaning..."
+	- make clean_soft
 
 clean_soft:
-	-rm *.aux
-	-rm *.log
-	-rm *.out
-	-rm *.pyg
-	-rm *.toc
+	- rm material/Logo_final-eps-converted-to.pdf
+	- rm select.tmp
+	- rm *.aux
+	- rm *.log
+	- rm *.out
+	- rm *.pyg
+	- rm *.toc
 
 clean:
-	make clean_soft
-	echo "removing PDF"
-	-rm main.pdf
+	- make clean_soft
+	- echo "removing PDF"
+	- rm $(DOC)/main.pdf
